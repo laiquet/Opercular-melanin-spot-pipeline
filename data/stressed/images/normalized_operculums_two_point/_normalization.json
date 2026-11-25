@@ -1,0 +1,8 @@
+{
+  "transfer": "sRGB (IEC 61966-2-1)",
+  "correction": "two-point affine on linear luminance",
+  "reference_pct": 0.2,
+  "size": 1080,
+  "n_processed": 84,
+  "n_failed": 0
+}

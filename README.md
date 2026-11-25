@@ -5,7 +5,6 @@ code in `scripts/`, inputs and intermediate data in `data/`, training sets in `d
 checkpoints in `model_weights/` and analysis outputs in `results/`.
 
 ```
-all_data/
 ├── scripts/                              pipeline, in run order
 │   ├── 01_model_training/                YOLOv8 operculum + spots, SAM-2.1 fine-tuning
 │   ├── 02_model_inference/               YOLOv8 operculum + spots, SAM-2 spot segmentation

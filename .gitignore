@@ -1,0 +1,7 @@
+scripts/third_party/sam2/
+__pycache__/
+.ipynb_checkpoints/
+runs/
+sam2_logs/
+*.npy
+*.cache

@@ -1,0 +1,9 @@
+{
+  "n_fish": 21,
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "min_detectable_r": 0.5785890782341664,
+  "min_detectable_r_squared": 0.33476532145186233,
+  "power_at_r_0.3": 0.25941782094706173,
+  "power_at_r_0.5": 0.6445205437081696
+}

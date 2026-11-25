@@ -1,0 +1,11 @@
+{
+  "normalisation": "two-point affine on linear luminance (eye/ID-tag anchors); only pipeline",
+  "measurement": "pixels linearised before averaging; ratios formed per spot",
+  "primary_outcome": "logratio",
+  "statistical_unit": "fish",
+  "n_fish": 21,
+  "n_opercula": 42,
+  "n_reference": 8,
+  "n_bootstrap": 10000,
+  "seed": 20260803
+}

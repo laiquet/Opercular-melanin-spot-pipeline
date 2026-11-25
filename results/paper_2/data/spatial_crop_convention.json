@@ -1,0 +1,34 @@
+{
+  "crop": {
+    "n": 84,
+    "operculum_area_mean_px": 896979.6547619047,
+    "operculum_area_cv_pct": 2.3987795360647186,
+    "operculum_area_max_over_min": 1.1239370768542236,
+    "bbox_w_mean": 1076.8095238095239,
+    "bbox_w_sd": 7.298252291987348,
+    "bbox_h_mean": 1073.595238095238,
+    "bbox_h_sd": 7.281134307928781,
+    "bbox_aspect_mean": 1.0030466776551537,
+    "bbox_aspect_sd": 0.010322234164434424,
+    "frame_px": 1080,
+    "fill_fraction_mean": 0.7690154790482723,
+    "major_axis_mean_px": 1248.4536154580146,
+    "major_axis_cv_pct": 4.532092386560217,
+    "n_labelled_spots": 2615,
+    "n_spots_outside_mask": 10,
+    "n_spots_retained": 2605,
+    "pct_spots_outside_mask": 0.3824091778202677,
+    "mask_tissue_iou_mean": 0.9690629571038998,
+    "n_images_with_excluded_spots": 9
+  },
+  "orientation": {
+    "mean_left": 0.3653993082640448,
+    "mean_right": 0.39061383853664317,
+    "sd_left": 0.16755418453407267,
+    "sd_right": 0.17806069798598592,
+    "n_left": 1246,
+    "n_right": 1359,
+    "mannwhitney_p": 0.0007106141247868154,
+    "difference": -0.025214530272598346
+  }
+}

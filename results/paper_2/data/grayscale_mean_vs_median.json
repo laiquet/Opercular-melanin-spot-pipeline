@@ -1,0 +1,15 @@
+{
+  "n": 2615,
+  "pearson_r": 0.9903750015849682,
+  "pearson_p": 0.0,
+  "spearman_rho": 0.9876931979156826,
+  "spearman_p": 0.0,
+  "mean_of_mean": 0.20344967820654705,
+  "mean_of_median": 0.18073182619127953,
+  "bias_mean_minus_median": 0.02271785201526748,
+  "sd_of_difference": 0.01868933379947735,
+  "loa_lower": -0.013913242231708131,
+  "loa_upper": 0.05934894626224309,
+  "pct_spots_mean_exceeds_median": 91.51051625239006,
+  "median_abs_difference": 0.0242276138942224
+}

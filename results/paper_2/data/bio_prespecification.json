@@ -1,0 +1,100 @@
+{
+  "responses": {
+    "total_melanization": {
+      "label": "Integrated melanization",
+      "model": "lmm"
+    },
+    "spot_count": {
+      "label": "Spot count",
+      "model": "nb"
+    },
+    "mean_rel_spot_area_pct": {
+      "label": "Mean relative spot area (%)",
+      "model": "lmm"
+    },
+    "skin_ref_log_ratio_linear": {
+      "label": "Mean skin-referenced intensity",
+      "model": "lmm"
+    }
+  },
+  "included_predictors": {
+    "sex": {
+      "label": "Sex",
+      "kind": "categorical",
+      "family": "primary",
+      "n_fish": 42
+    },
+    "body_mass_g": {
+      "label": "Body mass (g)",
+      "kind": "continuous",
+      "family": "primary",
+      "n_fish": 42
+    },
+    "fork_length_cm": {
+      "label": "Fork length (cm)",
+      "kind": "continuous",
+      "family": "primary",
+      "n_fish": 42
+    },
+    "condition_factor": {
+      "label": "Condition factor",
+      "kind": "continuous",
+      "family": "primary",
+      "n_fish": 42
+    },
+    "maturation": {
+      "label": "Sexual maturation",
+      "kind": "categorical",
+      "family": "primary",
+      "n_fish": 42
+    },
+    "fading_score": {
+      "label": "Visual fading score",
+      "kind": "continuous",
+      "family": "validation",
+      "n_fish": 42
+    },
+    "scale_loss": {
+      "label": "Scale loss",
+      "kind": "categorical",
+      "family": "welfare",
+      "n_fish": 42
+    },
+    "body_wounds": {
+      "label": "Body wounds",
+      "kind": "categorical",
+      "family": "welfare",
+      "n_fish": 42
+    },
+    "fin_status": {
+      "label": "Fin status",
+      "kind": "categorical",
+      "family": "welfare",
+      "n_fish": 42
+    },
+    "first_impression": {
+      "label": "First impression",
+      "kind": "categorical",
+      "family": "welfare",
+      "n_fish": 42
+    }
+  },
+  "excluded_predictors": {
+    "operculum_damage": {
+      "label": "Operculum damage",
+      "reason": "smallest group has 2 fish (minimum 4 required); distribution 0.0:36, 1.0:4, 2.0:2"
+    }
+  },
+  "absent_requested_biomarkers": [
+    "HSI (hepatosomatic index)",
+    "GSI (gonadosomatic index)",
+    "Growth rate / specific growth rate"
+  ],
+  "model_spec": {
+    "lmm": "descriptor ~ predictor + C(DAY) + C(SIDE), random intercept for fish",
+    "nb": "spot_count ~ predictor + C(DAY) + C(SIDE), negative-binomial GEE with exchangeable working correlation clustered by fish",
+    "rationale": "Imaging occasion and side are included as fixed covariates because both were shown to shift the descriptors (Sections 3 and 7); fish is a random intercept because each fish contributes four images."
+  },
+  "multiplicity": "Benjamini-Hochberg FDR applied across the primary family (responses x primary predictors). The validation and welfare families are corrected separately.",
+  "min_group_n": 4
+}

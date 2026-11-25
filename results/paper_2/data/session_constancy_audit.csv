@@ -1,0 +1,15 @@
+field,session_1_pre,session_2_post,held_constant
+Camera body,OLYMPUS CORPORATION TG-6,OLYMPUS CORPORATION TG-6,yes
+Date,2023-04-25,2023-04-26,no
+Time of day (first-last),15:55:23-19:28:52,10:11:40-15:19:16,no
+ISO,100,100,yes
+Focal length (mm),4.5,4.5,yes
+Aperture,f/2.8,"f/2.8, f/8",no
+Shutter speed (s),0.00125-0.008,0.001-0.01,no
+Exposure compensation (EV),"-0.7 (n=32), -0.3 (n=10)",-0.3 (n=42),no
+Flash,suppressed,suppressed,yes
+Background board,blue board,blue board,yes
+Realised exposure (board luma),52.6 (SD 12.4),51.2 (SD 10.0),not recorded
+Ambient illumination,not logged,not logged,not recorded
+Working distance,not recorded,not recorded,not recorded
+Operator,not recorded in metadata,not recorded in metadata,not recorded

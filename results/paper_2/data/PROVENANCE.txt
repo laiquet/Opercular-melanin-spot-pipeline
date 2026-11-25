@@ -1,0 +1,46 @@
+PROVENANCE  --  change datasets
+generated  2026-11-25 11:29
+by         scripts/build_change_datasets.py
+
+INPUTS READ
+  reference_tabular_data.csv
+  C:\Users\tala\Downloads\PhD\Kappa Guidelines\newest_work\all_data\paper_2\photometric_results\data\image_level_measures.csv
+  C:\Users\tala\Downloads\PhD\Kappa Guidelines\newest_work\all_data\paper_2\photometric_results\data\image_level_with_exposure.csv
+  C:\Users\tala\Downloads\PhD\Kappa Guidelines\newest_work\all_data\paper_2\photometric_results\data\spatial_operculum_geometry.csv
+
+MERGE AUDIT
+  image_level_measures.csv           84 rows, 21 fish
+  spatial_operculum_geometry.csv     84 rows, matched 84
+  image_level_with_exposure.csv      84 rows, matched 84
+  reference_tabular_data.csv         42 keyed rows, matched 84 of 84 images
+
+OUTPUTS
+  descriptors_long.csv        84 rows  (one per image)
+  change_by_fish_side.csv     42 rows  (one per fish-side)
+  change_by_fish.csv          21 rows  (one per fish)
+
+COLUMN PROVENANCE
+  spot_count, relative_spot_area_pct, integrated_melanization,
+  raw_mean_intensity, skin_ref_log_ratio, skin_ref_ratio,
+  opercular_skin_intensity          <- image_level_measures.csv
+  board_luma                        <- image_level_with_exposure.csv
+  mean_rel_spot_area_pct            <- rel_spot_area_pct (geometry) / spot_count
+  condition_factor, fork_length_cm, body_mass_g, sex, maturation,
+  fading_score                      <- reference_tabular_data.csv
+
+DERIVED COLUMNS
+  <name>_change            = post - pre
+  <name>_pct_change        = 100 * (post - pre) / pre
+                             blank for skin_ref_log_ratio: its zero point
+                             is arbitrary, so a percentage has no meaning
+  skin_ref_log_ratio_rel_change_pct = 100 * (exp(change) - 1)
+                             the proportional change in the spot-to-skin
+                             ratio, which IS interpretable
+
+CONVENTIONS
+  change = post - pre.
+  For skin_ref_log_ratio, more negative means darker, so a POSITIVE
+  change means the spots lightened.
+  change_by_fish.csv averages the two sides with equal weight, even
+  though the sides may carry different spot counts.
+  The 42 fish-side rows are NOT independent: two per fish.

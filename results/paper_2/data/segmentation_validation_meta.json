@@ -1,0 +1,9 @@
+{
+  "n_test_images": 27,
+  "n_test_gt_spots": 846,
+  "boundary_band_px": 2,
+  "conf_threshold": 0.25,
+  "infer_imgsz": 1024,
+  "headline_config": "YOLOv8-seg + SAM 2.1",
+  "device": "cuda"
+}

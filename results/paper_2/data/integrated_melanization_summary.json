@@ -1,0 +1,22 @@
+{
+  "n_images": 84,
+  "integrated_mean": 0.021613509472313892,
+  "integrated_sd": 0.006782549441627753,
+  "integrated_median": 0.0216975932166305,
+  "integrated_min": 0.0064675063452491,
+  "integrated_max": 0.0359597847780657,
+  "integrated_q1": 0.01697003630791335,
+  "integrated_q3": 0.027000500314607,
+  "integrated_cv_pct": 31.381064932171004,
+  "integrated_fold_range": 5.560069501049818,
+  "coverage_mean_pct": 6.167640594439727,
+  "coverage_min_pct": 1.8427337982476306,
+  "coverage_max_pct": 9.875465206784007,
+  "darkening_mean": 0.348842264237574,
+  "darkening_sd": 0.052990648736441236,
+  "darkening_cv_pct": 15.190432516041898,
+  "darkening_min": 0.2168086211386338,
+  "darkening_max": 0.501221421554807,
+  "pearson_r_coverage": 0.8699135525882377,
+  "r_squared_coverage": 0.7567495889766885
+}

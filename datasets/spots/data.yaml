@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['spot']
+
+roboflow:
+  workspace: dlml-stuff-6s6vs
+  project: ds_fs
+  version: 26
+  license: Public Domain
+  url: https://universe.roboflow.com/dlml-stuff-6s6vs/ds_fs/dataset/26

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['roi']
+
+roboflow:
+  workspace: dlml-stuff-6s6vs
+  project: ds_or
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/dlml-stuff-6s6vs/ds_or/dataset/3
